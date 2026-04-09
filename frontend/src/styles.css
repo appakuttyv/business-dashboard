@@ -6,10 +6,11 @@
   
   --bg-main: #F1F5F9;
   --bg-card: #FFFFFF;
-  --bg-sidebar: #1C2434;
+  --bg-sidebar: #FFFFFF;
   --bg-hover: #F7F9FC;
   
   --text-main: #1C2434;
+  --text-sidebar: #1C2434;
   --text-muted: #64748B;
   --text-white: #FFFFFF;
   
@@ -20,7 +21,7 @@
   --warning: #F59E0B;
   --danger: #EF4444;
 
-  /* Zinc Palette Equivalents */
+  /* Zinc Palette Equivalents for legacy components */
   --zinc-900: #1C2434;
   --zinc-800: #24303F;
   --zinc-500: #8A99AF;
@@ -49,9 +50,10 @@
 .dark {
   --bg-main: #1A222C;
   --bg-card: #24303F;
-  --bg-sidebar: #24303F;
+  --bg-sidebar: #1C2434;
   --bg-hover: #313D4A;
   --text-main: #FFFFFF;
+  --text-sidebar: #FFFFFF;
   --text-muted: #AEB7C0;
   --border: #313D4A;
   --border-strong: #3D4D5C;

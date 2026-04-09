@@ -80,8 +80,8 @@ import { ThemeService } from '../../services/theme.service';
     .sidebar {
       width: var(--sidebar-width);
       height: 100vh;
-      background: var(--zinc-900);
-      color: white;
+      background: var(--bg-sidebar);
+      color: var(--text-sidebar);
       display: flex;
       flex-direction: column;
       position: fixed;
@@ -89,7 +89,7 @@ import { ThemeService } from '../../services/theme.service';
       top: 0;
       z-index: 1000;
       transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      border-right: 1px solid var(--zinc-800);
+      border-right: 1px solid var(--border);
     }
 
     .sidebar.collapsed {
@@ -126,13 +126,13 @@ import { ThemeService } from '../../services/theme.service';
       font-size: 1.25rem;
       font-weight: 700;
       white-space: nowrap;
-      color: white;
+      color: var(--text-sidebar);
     }
 
     .collapse-toggle {
       background: transparent;
       border: none;
-      color: #8A99AF;
+      color: var(--text-muted);
       cursor: pointer;
       padding: 4px;
     }
@@ -147,7 +147,7 @@ import { ThemeService } from '../../services/theme.service';
       padding: var(--sp-4) var(--sp-2);
       font-size: 0.75rem;
       font-weight: 600;
-      color: #8A99AF;
+      color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
@@ -158,7 +158,7 @@ import { ThemeService } from '../../services/theme.service';
       gap: 12px;
       padding: 12px;
       border-radius: 8px;
-      color: #DEE4EE;
+      color: var(--text-muted);
       font-weight: 500;
       transition: all 0.2s;
       cursor: pointer;
@@ -169,8 +169,8 @@ import { ThemeService } from '../../services/theme.service';
     }
 
     .nav-link:hover, .nav-link.active {
-      color: white;
-      background: #333A48;
+      color: var(--primary);
+      background: var(--bg-hover);
     }
 
     .nav-link.active .icon {
@@ -191,7 +191,7 @@ import { ThemeService } from '../../services/theme.service';
     .arrow {
       font-size: 0.75rem;
       transition: transform 0.3s;
-      color: #8A99AF;
+      color: var(--text-muted);
     }
 
     .arrow.rotate {
@@ -202,20 +202,20 @@ import { ThemeService } from '../../services/theme.service';
       margin-left: 20px;
       margin-top: 4px;
       padding-left: 12px;
-      border-left: 1px solid #333A48;
+      border-left: 1px solid var(--border);
     }
 
     .submenu-link {
       display: block;
       padding: 8px 12px;
-      color: #D1D5DB;
+      color: var(--text-muted);
       font-size: 0.875rem;
       border-radius: 6px;
     }
 
     .submenu-link:hover, .submenu-link.active {
-      color: white;
-      background: #333A48;
+      color: var(--primary);
+      background: var(--bg-hover);
     }
 
     .badge {
@@ -229,7 +229,7 @@ import { ThemeService } from '../../services/theme.service';
 
     .sidebar-footer {
       padding: var(--sp-6);
-      border-top: 1px solid #333A48;
+      border-top: 1px solid var(--border);
     }
 
     .user-profile {
@@ -244,12 +244,12 @@ import { ThemeService } from '../../services/theme.service';
       border-radius: 8px;
     }
 
-    .user-profile .name { font-weight: 600; font-size: 0.875rem; color: white; }
-    .user-profile .email { font-size: 0.75rem; color: #8A99AF; }
+    .user-profile .name { font-weight: 600; font-size: 0.875rem; color: var(--text-sidebar); }
+    .user-profile .email { font-size: 0.75rem; color: var(--text-muted); }
 
     /* Scrollbar */
     .scroll-custom::-webkit-scrollbar { width: 4px; }
-    .scroll-custom::-webkit-scrollbar-thumb { background: #333A48; border-radius: 10px; }
+    .scroll-custom::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
   `]
 })
 export class SidebarComponent {
