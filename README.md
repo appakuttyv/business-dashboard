@@ -8,6 +8,11 @@ A premium, high-fidelity **Business Dashboard** template built with **Angular 17
 
 ---
 
+## 🔗 Live Demo
+**🚀 [Explore the Vortex Dashboard Live](https://appakuttyv.github.io/business-dashboard/dashboard/ecommerce)**
+
+---
+
 ## 🚀 Vision
 **Vortex** is more than just a dashboard; it's a comprehensive design system and architecture designed to bypass gravity and launch your SaaS product into orbit. It follows the **TailAdmin** design philosophy with a custom **Indigo-Slate** palette.
 
