@@ -1,85 +1,70 @@
-# 📊 Business Dashboard
+# 📊 Vortex Business Dashboard
 
-A modern and responsive **Business Dashboard** built to visualize key metrics, manage data, and improve decision-making.
+A premium, high-fidelity **Business Dashboard** template built with **Angular 17+**. Designed for scale, performance, and a stunning user experience.
 
 ---
 
-## 🚀 Features
+## 🚀 Vision
+**Vortex** is more than just a dashboard; it's a comprehensive design system and architecture designed to bypass gravity and launch your SaaS product into orbit. It follows the **TailAdmin** design philosophy with a custom **Indigo-Slate** palette.
 
-* 📈 Real-time analytics dashboard
-* 📊 Interactive charts & graphs
-* 🔐 Authentication & authorization
-* 📱 Fully responsive (mobile + desktop)
-* ⚡ Fast performance
-* 🧩 Modular and scalable architecture
+---
+
+## ✨ Features
+
+*   📈 **Multi-Dashboard Support**: specialized views for eCommerce, Analytics, Marketing, and CRM.
+*   🌓 **Advanced Theme Engine**: Persistent Light/Dark mode switching powered by Angular Signals.
+*   📅 **Interactive Calendar**: Full-featured monthly event management grid.
+*   💬 **Communication Suite**: Professional Inbox and real-time Chat interfaces.
+*   🧩 **Modular Architecture**: Strict Core/Shared/Features directory structure.
+*   📱 **True Responsive Design**: Fluid layouts for Desktop, Tablet, and Mobile.
+*   🤖 **Automated CI/CD**: One-click deployment to GitHub Pages via Actions.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** Angular
-* **Backend:** Python *(Flask / FastAPI / Django — update based on yours)*
-* **Database:** *(MySQL / PostgreSQL / MongoDB — update)*
-* **Other:** REST APIs, JWT Auth, Chart Libraries
-
----
-
-## 🤖 Tools & References
-
-This project was developed with the help of:
-
-* ChatGPT — for development assistance and problem solving
-* Google Antigravity — for creative inspiration
+*   **Frontend**: Angular 17+ (Standalone Components)
+*   **Styling**: Vanilla CSS (TailAdmin Design Tokens)
+*   **Icons**: FontAwesome 6 (Solid/Regular/Brands)
+*   **Deployment**: GitHub Actions + GitHub Pages
 
 ---
 
 ## 📂 Project Structure
 
-```bash id="l7f3bz"
+```bash
 business-dashboard/
-│── frontend/        # Angular app
-│── backend/         # Python backend
-│── README.md
+│── frontend/        # Angular standalone application
+│── backend/         # API logic & services (planned)
+│── assets/          # Static media & resources
+│── docs/            # Project documentation & walkthroughs
+└── README.md
 ```
-
-> ⚠️ Note: `assets/` and `docs/` folders are planned but not yet created.
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Quick Start
 
-### 1. Clone the repo
-
-```bash id="n0tqwe"
-git clone https://github.com/your-username/business-dashboard.git
-cd business-dashboard
+### 1. Installation
+```bash
+git clone https://github.com/appakuttyv/business-dashboard.git
+cd business-dashboard/frontend
+npm install
 ```
 
-### 2. Frontend Setup
-
-```bash id="c6qj9f"
-cd frontend
-npm install
+### 2. Development Mode
+```bash
 ng serve
 ```
-
-### 3. Backend Setup
-
-```bash id="k1z9wx"
-cd backend
-pip install -r requirements.txt
-python app.py
-```
-
----
-
-## 🔒 Access Notice
-
-This repository is for **view-only purposes**.
-Unauthorized contributions or usage are not permitted.
+Open `http://localhost:4200` to see the dashboard in action.
 
 ---
 
 ## 👨‍💻 Author
-
 **Appakutty V**
+*Lead Architect & Developer*
+
+---
+
+## 📜 Documentation
+Check the [Full Project Walkthrough](docs/walkthrough.md) for a detailed technical breakdown and feature showcase.
