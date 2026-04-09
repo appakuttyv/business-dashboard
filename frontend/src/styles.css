@@ -1,0 +1,111 @@
+:root {
+  /* Colors - TailAdmin Indigo & Slate Palette */
+  --primary: #3C50E0;
+  --primary-hover: #2E3FA9;
+  --primary-light: #3C50E010;
+  
+  --bg-main: #F1F5F9;
+  --bg-card: #FFFFFF;
+  --bg-sidebar: #1C2434;
+  --bg-hover: #F7F9FC;
+  
+  --text-main: #1C2434;
+  --text-muted: #64748B;
+  --text-white: #FFFFFF;
+  
+  --border: #E2E8F0;
+  --border-strong: #CBD5E1;
+  
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+
+  /* Zinc Palette Equivalents */
+  --zinc-900: #1C2434;
+  --zinc-800: #24303F;
+  --zinc-500: #8A99AF;
+  --zinc-400: #D1D5DB;
+
+  /* Layout */
+  --sidebar-width: 280px;
+  --header-height: 80px;
+  
+  /* Effects */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-premium: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --radius: 10px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+}
+
+/* Dark Mode Overrides */
+.dark {
+  --bg-main: #1A222C;
+  --bg-card: #24303F;
+  --bg-sidebar: #24303F;
+  --bg-hover: #313D4A;
+  --text-main: #FFFFFF;
+  --text-muted: #AEB7C0;
+  --border: #313D4A;
+  --border-strong: #3D4D5C;
+  
+  /* Zinc Overrides */
+  --zinc-900: #1A222C;
+  --zinc-800: #24303F;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+.text-right { text-align: right; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 10px;
+}
