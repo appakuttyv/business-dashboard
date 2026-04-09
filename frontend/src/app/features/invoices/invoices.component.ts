@@ -103,6 +103,6 @@ export class InvoicesComponent {
     { id: '45102', client: 'Appakutty V', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Appakutty', date: 'Oct 09, 2026', amount: '$450.00', status: 'Paid' },
     { id: '45101', client: 'Sara Martin', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sara', date: 'Oct 08, 2026', amount: '$1,200.00', status: 'Pending' },
     { id: '45100', client: 'John Doe', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=John', date: 'Oct 07, 2026', amount: '$250.00', status: 'Unpaid' },
-    { id: '45099', client: 'Vortex Corp', avatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=Vortex', date: 'Oct 06, 2026', amount: '$4,120.00', status: 'Paid' },
+    { id: '45099', client: 'Appakutty Corp', avatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=Appakutty', date: 'Oct 06, 2026', amount: '$4,120.00', status: 'Paid' },
   ];
 }

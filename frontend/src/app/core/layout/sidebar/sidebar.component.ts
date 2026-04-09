@@ -15,7 +15,7 @@ import { ThemeService } from '../../services/theme.service';
           <div class="logo-icon">
             <i class="fa-solid fa-bolt"></i>
           </div>
-          <span class="logo-text" *ngIf="!isCollapsed()">Vortex<span class="dot">.</span></span>
+          <span class="logo-text" *ngIf="!isCollapsed()">Appakutty<span class="dot">.</span></span>
         </div>
         <button class="collapse-toggle" (click)="toggleCollapse()">
           <i class="fa-solid" [ngClass]="isCollapsed() ? 'fa-angles-right' : 'fa-angles-left'"></i>

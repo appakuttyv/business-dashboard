@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
         <div class="auth-left">
            <div class="logo">
               <i class="fa-solid fa-bolt"></i>
-              <span>Vortex.</span>
+              <span>Appakutty.</span>
            </div>
            <p class="tagline">The most popular Angular dashboard template for your next project.</p>
            <img src="https://api.dicebear.com/7.x/shapes/svg?seed=auth" alt="shape" class="shape">
@@ -20,7 +20,7 @@ import { RouterModule } from '@angular/router';
 
         <div class="auth-right">
            <div class="form-header">
-              <h2>Sign In to Vortex</h2>
+              <h2>Sign In to Appakutty Dashboard</h2>
               <p>Enter your details to login to your account.</p>
            </div>
 

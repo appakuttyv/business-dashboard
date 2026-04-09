@@ -1,4 +1,4 @@
-# 📊 Vortex Business Dashboard
+# 📊 Appakutty Dashboard
 
 ![Build](https://img.shields.io/github/actions/workflow/status/appakuttyv/business-dashboard/deploy.yml)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
@@ -9,12 +9,12 @@ A premium, high-fidelity **Business Dashboard** template built with **Angular 17
 ---
 
 ## 🔗 Live Demo
-**🚀 [Explore the Vortex Dashboard Live](https://appakuttyv.github.io/business-dashboard/dashboard/ecommerce)**
+**🚀 [Explore the Appakutty Dashboard Live](https://appakuttyv.github.io/business-dashboard/dashboard/ecommerce)**
 
 ---
 
 ## 🚀 Vision
-**Vortex** is more than just a dashboard; it's a comprehensive design system and architecture designed to bypass gravity and launch your SaaS product into orbit. It follows the **TailAdmin** design philosophy with a custom **Indigo-Slate** palette.
+**Appakutty Dashboard** is more than just a dashboard; it's a comprehensive design system and architecture designed to bypass gravity and launch your SaaS product into orbit. It follows the **TailAdmin** design philosophy with a custom **Indigo-Slate** palette.
 
 ---
 
@@ -114,7 +114,7 @@ Check the [Full Project Walkthrough](docs/walkthrough.md) for a detailed technic
 You can use this PowerShell snippet to reset or initialize the project modules:
 
 ```powershell
-Write-Host "🚀 Initiating Vortex launch sequence... 🪂" -ForegroundColor Cyan
+Write-Host "🚀 Initiating Appakutty Dashboard launch sequence... 🪂" -ForegroundColor Cyan
 $folders = @("backend","assets","docs")
 foreach ($f in $folders) {
     if (-Not (Test-Path $f)) { mkdir $f }

@@ -1,6 +1,6 @@
-# 🚀 Vortex Business Dashboard: Project Showcase
+# 🚀 Appakutty Dashboard: Project Showcase
 
-The **Vortex Business Dashboard** is a premium SaaS administration interface built with **Angular (Standalone)**. It features a modern, responsive design based on the **TailAdmin** Indigo/Slate palette, offering high-fidelity data visualization and complex user interaction patterns.
+The **Appakutty Dashboard** is a premium SaaS administration interface built with **Angular (Standalone)**. It features a modern, responsive design based on the **TailAdmin** Indigo/Slate palette, offering high-fidelity data visualization and complex user interaction patterns.
 
 ---
 

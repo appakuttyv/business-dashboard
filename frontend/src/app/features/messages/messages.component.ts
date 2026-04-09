@@ -128,7 +128,7 @@ export class MessagesComponent {
     { name: 'Appakutty V', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Appakutty', lastMessage: 'The dashboard is looking amazing!', unread: 2, online: true, active: true },
     { name: 'Sara Desing', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sara', lastMessage: 'Can you update the charts?', unread: 0, online: false },
     { name: 'John Doe', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=John', lastMessage: 'Let\'s meeting at 3 PM', unread: 0, online: true },
-    { name: 'Vortex Bot', avatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=Vortex', lastMessage: 'System alert: 5 new issues', unread: 1, online: true },
+    { name: 'Appakutty Bot', avatar: 'https://api.dicebear.com/7.x/bottts/svg?seed=Appakutty', lastMessage: 'System alert: 5 new issues', unread: 1, online: true },
   ];
 
   messages = [

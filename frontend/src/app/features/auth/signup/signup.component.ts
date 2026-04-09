@@ -12,9 +12,9 @@ import { RouterModule } from '@angular/router';
         <div class="auth-left">
            <div class="logo">
               <i class="fa-solid fa-bolt"></i>
-              <span>Vortex.</span>
+              <span>Appakutty.</span>
            </div>
-           <p class="tagline">Join thousands of companies using Vortex to power their dashboards.</p>
+           <p class="tagline">Join thousands of companies using Appakutty Dashboard to power their dashboards.</p>
            <img src="https://api.dicebear.com/7.x/shapes/svg?seed=signup" alt="shape" class="shape">
         </div>
 
