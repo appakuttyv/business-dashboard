@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ThemeService } from '../../services/theme.service';
+import { ResponsiveService } from '../../services/responsive.service';
 
 @Component({
   selector: 'app-header',
@@ -9,10 +10,19 @@ import { ThemeService } from '../../services/theme.service';
   template: `
     <header class="header">
       <div class="header-left">
-        <div class="search-hint" (click)="focusSearch()">
+        <!-- New Mobile Menu Toggle -->
+        <button 
+          class="menu-toggle" 
+          *ngIf="responsive.isMobile() || responsive.isTablet()"
+          (click)="responsive.toggleSidebar()"
+        >
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+
+        <div class="search-hint" (click)="focusSearch()" [class.compact]="responsive.isMobile()">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <span>Type to search...</span>
-          <kbd class="kbd">⌘K</kbd>
+          <span *ngIf="!responsive.isMobile()">Type to search...</span>
+          <kbd class="kbd" *ngIf="!responsive.isMobile()">⌘K</kbd>
         </div>
       </div>
       
@@ -27,29 +37,29 @@ import { ThemeService } from '../../services/theme.service';
         </button>
 
         <!-- Notifications -->
-        <div class="action-item">
+        <div class="action-item" *ngIf="!responsive.isMobile()">
           <i class="fa-regular fa-bell"></i>
           <span class="ping"></span>
         </div>
 
         <!-- Messages -->
-        <div class="action-item">
+        <div class="action-item" *ngIf="!responsive.isMobile()">
           <i class="fa-regular fa-message"></i>
           <span class="ping info"></span>
         </div>
         
-        <div class="divider"></div>
+        <div class="divider" *ngIf="!responsive.isMobile()"></div>
         
         <!-- User Profile -->
         <div class="user-dropdown">
-          <div class="user-meta">
+          <div class="user-meta" *ngIf="!responsive.isMobile()">
             <p class="name">Appakutty V</p>
             <p class="role">Admin Administrator</p>
           </div>
           <div class="avatar">
             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Appakutty" alt="User">
           </div>
-          <i class="fa-solid fa-chevron-down arrow"></i>
+          <i class="fa-solid fa-chevron-down arrow" *ngIf="!responsive.isMobile()"></i>
         </div>
       </div>
     </header>
@@ -69,8 +79,29 @@ import { ThemeService } from '../../services/theme.service';
       transition: background 0.3s;
     }
 
+    @media (max-width: 768px) {
+      .header { padding: 0 var(--sp-4); }
+    }
+
     .header-left {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
       flex: 1;
+    }
+
+    .menu-toggle {
+      width: 40px;
+      height: 40px;
+      border: none;
+      background: var(--bg-main);
+      color: var(--text-main);
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
     }
 
     .search-hint {
@@ -84,7 +115,10 @@ import { ThemeService } from '../../services/theme.service';
       color: var(--text-muted);
       max-width: 400px;
       cursor: text;
+      transition: var(--transition);
     }
+
+    .search-hint.compact { width: 40px; padding: 0; justify-content: center; border-radius: 50%; height: 40px; }
 
     .kbd {
       margin-left: auto;
@@ -99,7 +133,7 @@ import { ThemeService } from '../../services/theme.service';
     .header-right {
       display: flex;
       align-items: center;
-      gap: var(--sp-6);
+      gap: var(--sp-4);
     }
 
     /* Theme Toggle Switch */
@@ -159,11 +193,6 @@ import { ThemeService } from '../../services/theme.service';
       position: relative;
     }
 
-    .action-item:hover {
-      color: var(--primary);
-      border-color: var(--primary);
-    }
-
     .ping {
       position: absolute;
       top: 0;
@@ -210,6 +239,7 @@ import { ThemeService } from '../../services/theme.service';
       border-radius: 50%;
       overflow: hidden;
       background: var(--bg-main);
+      border: 2px solid var(--border);
     }
 
     .avatar img { width: 100%; height: 100%; object-fit: cover; }
@@ -222,6 +252,7 @@ import { ThemeService } from '../../services/theme.service';
 })
 export class HeaderComponent {
   themeService = inject(ThemeService);
+  responsive = inject(ResponsiveService);
 
   focusSearch() {
     console.log('Search focused');

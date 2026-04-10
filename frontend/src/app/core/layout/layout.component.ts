@@ -1,8 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
+import { ResponsiveService } from '../services/responsive.service';
 
 @Component({
   selector: 'app-layout',
@@ -10,9 +11,20 @@ import { HeaderComponent } from './header/header.component';
   imports: [CommonModule, RouterOutlet, SidebarComponent, HeaderComponent],
   template: `
     <div class="app-wrapper">
+      <!-- Mobile Overlay -->
+      <div 
+        class="mobile-overlay" 
+        *ngIf="responsive.isMobile() || responsive.isTablet()"
+        [class.active]="responsive.isSidebarOpen()"
+        (click)="responsive.closeSidebar()"
+      ></div>
+
       <app-sidebar></app-sidebar>
       
-      <div class="main-container">
+      <div 
+        class="main-container"
+        [style.margin-left]="getMainMargin()"
+      >
         <app-header></app-header>
         
         <main class="content-area">
@@ -26,16 +38,33 @@ import { HeaderComponent } from './header/header.component';
       display: flex;
       min-height: 100vh;
       overflow: hidden;
+      background: var(--bg-main);
+    }
+
+    .mobile-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 990;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      backdrop-filter: blur(2px);
+    }
+
+    .mobile-overlay.active {
+      opacity: 1;
+      visibility: visible;
     }
 
     .main-container {
       flex: 1;
       display: flex;
       flex-direction: column;
-      margin-left: var(--sidebar-width);
       min-height: 100vh;
       transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       background: var(--bg-main);
+      width: 100%;
     }
 
     .content-area {
@@ -46,17 +75,20 @@ import { HeaderComponent } from './header/header.component';
       width: 100%;
     }
 
-    @media (max-width: 1024px) {
-      .main-container {
-        margin-left: 80px;
-      }
-    }
-
     @media (max-width: 768px) {
-      .main-container {
-        margin-left: 0;
+      .content-area {
+        padding: var(--sp-4);
       }
     }
   `]
 })
-export class LayoutComponent {}
+export class LayoutComponent {
+  responsive = inject(ResponsiveService);
+
+  getMainMargin(): string {
+    if (this.responsive.isMobile() || this.responsive.isTablet()) {
+      return '0';
+    }
+    return this.responsive.isSidebarCollapsed() ? '80px' : '280px';
+  }
+}

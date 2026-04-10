@@ -90,8 +90,15 @@ import { CardComponent } from '../../shared/components/card/card.component';
     .line-mock .line { height: 100%; border-radius: 2px; }
     .trend-label { font-size: 0.75rem; font-weight: 600; }
 
+    .main-row { display: grid; grid-template-columns: 2fr 1fr; gap: var(--sp-6); }
+    @media (max-width: 1024px) { .main-row { grid-template-columns: 1fr; } }
+
     .pipeline { display: flex; flex-direction: column; gap: 20px; }
     .stage { display: grid; grid-template-columns: 140px 1fr 100px; gap: 20px; align-items: center; }
+    @media (max-width: 600px) { 
+      .stage { grid-template-columns: 1fr; gap: 8px; } 
+      .stage .amount { text-align: left; }
+    }
     .stage-info { display: flex; align-items: center; gap: 10px; }
     .stage-info .dot { width: 8px; height: 8px; border-radius: 50%; }
     .stage-info .name { font-size: 0.875rem; font-weight: 500; color: var(--text-muted); }
